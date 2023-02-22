@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoplulateDataInDropDown", "PoplulateDataInDropDown\PoplulateDataInDropDown.csproj", "{034C9064-AE8A-4D6D-8125-5317E7368022}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulateDataInDropDown", "PoplulateDataInDropDown\PopulateDataInDropDown.csproj", "{034C9064-AE8A-4D6D-8125-5317E7368022}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
