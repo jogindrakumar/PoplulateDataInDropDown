@@ -12,6 +12,9 @@
         </div>
         <asp:DropDownList ID="DropDownList1" runat="server" Height="43px" Width="199px">
         </asp:DropDownList>
+        <p>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
+        </p>
     </form>
 </body>
 </html>

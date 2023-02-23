@@ -36,5 +36,19 @@ namespace PoplulateDataInDropDown
             item.Selected = true;   
             DropDownList1.Items.Insert(0,item);
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if(DropDownList1.SelectedValue == "-1")
+            {
+            Response.Write("Please Select an empolyee");
+            }
+            else
+            {
+                Response.Write("Selected item is :" + DropDownList1.SelectedItem.Text + "<br/>");
+                Response.Write("Selected item value is :" + DropDownList1.SelectedItem.Value + "<br/>");
+                Response.Write("Selected item value is :" + DropDownList1.SelectedIndex);
+            }
+        }
     }
 }
