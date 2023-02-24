@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Drawing;
 
 namespace PoplulateDataInDropDown
 {
@@ -45,9 +46,22 @@ namespace PoplulateDataInDropDown
             }
             else
             {
-                Response.Write("Selected item is :" + DropDownList1.SelectedItem.Text + "<br/>");
-                Response.Write("Selected item value is :" + DropDownList1.SelectedItem.Value + "<br/>");
-                Response.Write("Selected item value is :" + DropDownList1.SelectedIndex);
+                //Response.Write("Selected item is :" + DropDownList1.SelectedItem.Text + "<br/>");
+                //Response.Write("Selected item value is :" + DropDownList1.SelectedItem.Value + "<br/>");
+                //Response.Write("Selected item value is :" + DropDownList1.SelectedIndex);
+                SqlConnection con = new SqlConnection(cs);
+                string query = "select * from employee where NAME = @NAME";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                sda.SelectCommand.Parameters.AddWithValue("@NAME",DropDownList1.SelectedItem.Text);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                GridView1.DataSource = dt;
+
+                GridView1.DataBind();
+                Label1.Text = "Rows Found";
+                Label1.ForeColor = Color.Green;
+               Label1.Visible= true;
+             
             }
         }
     }
